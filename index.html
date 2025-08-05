@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- NOVAS META TAGS FIXAS - NÃO ALTERADAS PELO JS -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="🚀 Revolução WhatsApp Marketing 2025">
     <meta property="og:description" content="Sistema de Landing Page Embutida que aumenta conversões em até 340%. Tecnologia exclusiva para dominar o WhatsApp. De R$297 por R$97.">
-    <meta property="og:image" content="https://viniciusxtrad.github.io/imagens/imagens1/menmaioe.jpg">
+    <meta property="og:image" content="https://viniciusxtrad.github.io/imagens/imagens1/menmaioe.jpg"> <!-- IMAGEM CORS-OK -->
     <meta property="og:image:secure_url" content="https://viniciusxtrad.github.io/imagens/imagens1/menmaioe.jpg">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
@@ -655,22 +656,12 @@
             }
         }
         
-        /* Canvas para redimensionar */
-        #imageCanvas {
-            display: none;
-        }
-        
         .resized-image {
             width: 100%;
             height: auto;
             aspect-ratio: 1200/630;
             object-fit: cover;
             border-radius: 20px;
-        }
-        
-        /* PROTEÇÃO ADICIONAL */
-        .no-dev {
-            display: none !important;
         }
     </style>
 </head>
@@ -702,8 +693,7 @@ Ninguém quer perder tempo abrindo, muito menos apagar depois.
             <img id="originalImage" 
                  src="https://viniciusxtrad.github.io/imagens/imagens1/menmaioe.jpg" 
                  alt="Sistema Revolucionário WhatsApp Marketing" 
-                 class="preview-image resized-image"
-                 crossorigin="anonymous">
+                 class="preview-image resized-image">
         </section>
 
         <section class="stats-grid" id="resultados">
@@ -852,8 +842,6 @@ Ninguém quer perder tempo abrindo, muito menos apagar depois.
         </section>
     </div>
 
-    <canvas id="imageCanvas"></canvas>
-
     <script>
         // Lógica de proteção contra F12, Ctrl+U e clique direito
         document.addEventListener('contextmenu', function(e) {
@@ -875,60 +863,19 @@ Ninguém quer perder tempo abrindo, muito menos apagar depois.
             }
         });
         
-        // Função para redimensionar imagem para 1200x630px
-        function resizeImageTo1200x630(img) {
-            const canvas = document.getElementById('imageCanvas');
-            const ctx = canvas.getContext('2d');
-            
-            canvas.width = 1200;
-            canvas.height = 630;
-            
-            const imgRatio = img.naturalWidth / img.naturalHeight;
-            const canvasRatio = 1200 / 630;
-            
-            let drawWidth, drawHeight, offsetX, offsetY;
-            
-            if (imgRatio > canvasRatio) {
-                drawHeight = 630;
-                drawWidth = drawHeight * imgRatio;
-                offsetX = (1200 - drawWidth) / 2;
-                offsetY = 0;
-            } else {
-                drawWidth = 1200;
-                drawHeight = drawWidth / imgRatio;
-                offsetX = 0;
-                offsetY = (630 - drawHeight) / 2;
-            }
-            
-            ctx.fillStyle = '#0a0a0a';
-            ctx.fillRect(0, 0, 1200, 630);
-            ctx.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
-            
-            const resizedImageDataUrl = canvas.toDataURL('image/png', 0.9);
-            updateMetaTags(resizedImageDataUrl);
-            
-            return resizedImageDataUrl;
-        }
-        
-        // Função para atualizar meta tags
-        function updateMetaTags(imageDataUrl) {
-            const oldMetaTags = document.querySelectorAll('meta[property="og:image"], meta[property="og:image:secure_url"], meta[name="twitter:image"]');
-            oldMetaTags.forEach(tag => tag.remove());
-            
-            const metaTags = [
-                { property: 'og:image', content: imageDataUrl },
-                { property: 'og:image:secure_url', content: imageDataUrl },
-                { name: 'twitter:image', content: imageDataUrl }
-            ];
-            
-            metaTags.forEach(tag => {
-                const meta = document.createElement('meta');
-                if (tag.property) meta.setAttribute('property', tag.property);
-                if (tag.name) meta.setAttribute('name', tag.name);
-                meta.setAttribute('content', tag.content);
-                document.head.appendChild(meta);
+        // Smooth scrolling para navegação
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
-        }
+        });
         
         // Timer countdown
         function updateCountdown() {
@@ -957,20 +904,6 @@ Ninguém quer perder tempo abrindo, muito menos apagar depois.
             }, 1000);
         }
         
-        // Smooth scrolling para navegação
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-        
         // Animações de entrada
         const observerOptions = {
             threshold: 0.1,
@@ -994,6 +927,9 @@ Ninguém quer perder tempo abrindo, muito menos apagar depois.
                 el.style.transform = 'translateY(30px)';
                 observer.observe(el);
             });
+            
+            // Iniciar countdown
+            updateCountdown();
         });
         
         // Efeitos de hover nos botões
@@ -1007,135 +943,7 @@ Ninguém quer perder tempo abrindo, muito menos apagar depois.
             });
         });
         
-        // Carregar e processar imagem
-        window.addEventListener('load', function() {
-            const img = document.getElementById('originalImage');
-            
-            img.onload = function() {
-                console.log('Imagem carregada:', img.naturalWidth + 'x' + img.naturalHeight);
-                
-                if (img.naturalWidth !== 1200 || img.naturalHeight !== 630) {
-                    try {
-                        resizeImageTo1200x630(img);
-                        console.log('Imagem redimensionada para 1200x630px');
-                    } catch (error) {
-                        console.error('Erro ao redimensionar imagem:', error);
-                    }
-                }
-            };
-            
-            img.onerror = function() {
-                console.error('Erro ao carregar a imagem');
-            };
-            
-            if (img.complete) {
-                img.onload();
-            }
-            
-            // Iniciar countdown
-            updateCountdown();
-        });
-        
-        // Parallax suave para background
-        let ticking = false;
-        
-        function updateParallax() {
-            const scrolled = window.pageYOffset;
-            const rate = scrolled * -0.5;
-            document.body.style.backgroundPosition = `center ${rate}px`;
-            ticking = false;
-        }
-        
-        function requestParallaxUpdate() {
-            if (!ticking) {
-                requestAnimationFrame(updateParallax);
-                ticking = true;
-            }
-        }
-        
-        window.addEventListener('scroll', requestParallaxUpdate);
-        
-        // Efeito de digitação no título (opcional)
-        function typeWriter(element, text, speed = 100) {
-            let i = 0;
-            element.innerHTML = '';
-            
-            function type() {
-                if (i < text.length) {
-                    element.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                }
-            }
-            
-            type();
-        }
-        
-        // Analytics de cliques nos botões (para tracking)
-        document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
-            link.addEventListener('click', function() {
-                // Aqui você pode adicionar código de tracking/analytics
-                console.log('Click no WhatsApp:', this.href);
-                
-                // Exemplo de tracking com Google Analytics (se disponível)
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'click', {
-                        'event_category': 'WhatsApp',
-                        'event_label': this.textContent.trim()
-                    });
-                }
-            });
-        });
-        
-        // Prevenir bounce com intenção de saída
-        let exitIntentTriggered = false;
-        
-        document.addEventListener('mouseleave', function(e) {
-            if (e.clientY <= 0 && !exitIntentTriggered) {
-                exitIntentTriggered = true;
-                // Aqui você pode mostrar um popup ou oferta especial
-                console.log('Intenção de saída detectada');
-            }
-        });
-        
-        // Mobile menu toggle (se necessário no futuro)
-        function toggleMobileMenu() {
-            const menu = document.querySelector('.nav-menu');
-            if (menu) {
-                menu.classList.toggle('active');
-            }
-        }
-        
-        // Verificar se está no mobile
-        function isMobile() {
-            return window.innerWidth <= 768;
-        }
-        
-        // Ajustar comportamentos para mobile
-        if (isMobile()) {
-            // Desabilitar alguns efeitos para melhor performance
-            document.body.style.backgroundAttachment = 'scroll';
-        }
-        
-        // Lazy loading para imagens (se houver mais imagens)
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src;
-                        img.classList.remove('lazy');
-                        imageObserver.unobserve(img);
-                    }
-                });
-            });
-            
-            document.querySelectorAll('img[data-src]').forEach(img => {
-                imageObserver.observe(img);
-            });
-        }
-        
-        console.log('🚀 Landing Page Futurística carregada com sucesso!');
+        console.log('🚀 Landing Page WhatsApp otimizada carregada!');
     </script>
 </body>
 </html>

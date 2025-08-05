@@ -8,13 +8,13 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="😳 Nova Tendência WhatsApp">
     <meta property="og:description" content="99% das pessoas ignoram imagens no WhatsApp. A nova tendência MATADORA: landing page embutida! De R$99 por apenas R$50. Adote agora ou fique invisível!">
-    <meta property="og:image" content="https://engevealbani.github.io/yesfotos/foto/prevew21.jpg">
-    <meta property="og:image:secure_url" content="https://engevealbani.github.io/yesfotos/foto/prevew21.jpg">
+    <meta property="og:image" content="https://viniciusxtrad.github.io/imagens/sualanchonete01.png">
+    <meta property="og:image:secure_url" content="https://viniciusxtrad.github.io/imagens/sualanchonete01.png">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Landing Page Embutida - Banner WhatsApp">
-    <meta property="og:url" content="https://engeve-brasil-marketing.onrender.com">
+    <meta property="og:url" content="https://partiu-vender-mais-dnl7.onrender.com">
     <meta property="og:site_name" content="Landing Page Embutida">
     <meta property="fb:app_id" content="1234567890123456">
     
@@ -22,7 +22,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="😳  - Nova Tendência WhatsApp">
     <meta name="twitter:description" content="99% das pessoas ignoram imagens no WhatsApp. A nova tendência MATADORA: landing page embutida! De R$99 por apenas R$50.">
-    <meta name="twitter:image" content="https://engevealbani.github.io/yesfotos/foto/prevew21.jpg">
+    <meta name="twitter:image" content="https://viniciusxtrad.github.io/imagens/sualanchonete01.png">
     <meta name="twitter:image:alt" content="Landing Page Embutida - Banner WhatsApp">
     
     <!-- Meta tags básicas -->
@@ -40,19 +40,21 @@
         
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #ff6b6b, #feca57);
+            background: linear-gradient(135deg, #0f0f23, #1a1a2e, #16213e);
+            background-attachment: fixed;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px;
+            padding: 10px;
         }
         
         .container {
-            background: white;
+            background: linear-gradient(145deg, #1a1a2e, #0f0f23);
+            border: 1px solid rgba(138, 43, 226, 0.3);
             border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 50px rgba(138, 43, 226, 0.1);
+            padding: 30px;
             text-align: center;
             max-width: 600px;
             width: 100%;
@@ -71,29 +73,30 @@
         }
         
         h1 {
-            color: #2c3e50;
+            color: #ffffff;
             margin-bottom: 20px;
-            font-size: 2.5em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            font-size: 2.2em;
+            text-shadow: 0 0 20px rgba(138, 43, 226, 0.6), 2px 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.2;
         }
         
         .preview-image {
             width: 100%;
             max-width: 500px;
             border-radius: 15px;
-            margin: 30px auto;
+            margin: 25px auto;
             display: block;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4), 0 0 30px rgba(30, 144, 255, 0.2);
             transition: transform 0.3s ease;
             overflow: hidden;
             position: relative;
+            border: 2px solid rgba(138, 43, 226, 0.3);
         }
         
         .preview-image:hover {
-            transform: scale(1.05);
+            transform: scale(1.02);
         }
         
-        /* Canvas para redimensionar a imagem */
         #imageCanvas {
             display: none;
         }
@@ -107,133 +110,148 @@
         }
         
         .description {
-            color: #555;
-            font-size: 1.2em;
-            line-height: 1.6;
-            margin: 20px 0;
+            color: #e0e0e0;
+            font-size: 1.1em;
+            line-height: 1.5;
+            margin: 18px 0;
         }
         
         .highlight {
-            background: linear-gradient(120deg, #feca57 0%, #feca57 100%);
+            background: linear-gradient(120deg, #8a2be2 0%, #1e90ff 100%);
             background-repeat: no-repeat;
             background-size: 100% 40%;
             background-position: 0 60%;
             font-weight: bold;
-            color: #2c3e50;
+            color: #ffffff;
+            padding: 2px 6px;
+            border-radius: 4px;
         }
         
         .cta-button {
-            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            background: linear-gradient(45deg, #8a2be2, #1e90ff, #00bfff);
             color: white;
-            padding: 15px 30px;
+            padding: 15px 25px;
             border: none;
             border-radius: 50px;
-            font-size: 1.1em;
+            font-size: 1em;
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
-            margin: 20px 10px;
-            box-shadow: 0 5px 15px rgba(255,107,107,0.3);
+            margin: 15px 5px;
+            box-shadow: 0 8px 25px rgba(138, 43, 226, 0.4), 0 0 20px rgba(30, 144, 255, 0.2);
+            width: auto;
+            min-width: 200px;
+            border: 1px solid rgba(138, 43, 226, 0.5);
         }
         
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(255,107,107,0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(138, 43, 226, 0.6), 0 0 30px rgba(30, 144, 255, 0.4);
+            background: linear-gradient(45deg, #9932cc, #4169e1, #00bfff);
         }
         
         .whatsapp-btn {
-            background: #25d366;
+            background: linear-gradient(45deg, #25d366, #128c7e);
             color: white;
-            padding: 15px 30px;
+            padding: 15px 25px;
             border-radius: 50px;
             text-decoration: none;
             display: inline-block;
-            margin: 10px;
+            margin: 10px 5px;
             transition: all 0.3s ease;
             font-weight: bold;
-            box-shadow: 0 5px 15px rgba(37,211,102,0.3);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4), 0 0 20px rgba(37, 211, 102, 0.2);
+            width: auto;
+            min-width: 200px;
+            border: 1px solid rgba(37, 211, 102, 0.5);
         }
         
         .whatsapp-btn:hover {
-            background: #128c7e;
-            transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(37,211,102,0.4);
+            background: linear-gradient(45deg, #128c7e, #075e54);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.6), 0 0 30px rgba(37, 211, 102, 0.4);
         }
         
         .social-share {
-            margin-top: 30px;
+            margin-top: 25px;
             padding-top: 20px;
-            border-top: 2px solid #eee;
+            border-top: 2px solid rgba(138, 43, 226, 0.3);
         }
         
         .share-text {
-            color: #666;
+            color: #e0e0e0;
             margin-bottom: 15px;
-            font-size: 1.1em;
+            font-size: 1em;
         }
         
         .price-highlight {
-            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            background: linear-gradient(45deg, #8a2be2, #1e90ff);
             color: white;
-            padding: 20px;
+            padding: 18px;
             border-radius: 15px;
-            margin: 20px 0;
-            font-size: 1.3em;
+            margin: 18px 0;
+            font-size: 1.2em;
             font-weight: bold;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3), 0 0 30px rgba(138, 43, 226, 0.3);
             text-align: center;
+            border: 1px solid rgba(138, 43, 226, 0.4);
         }
         
         .urgency-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f0f23);
             color: white;
-            padding: 25px;
-            border-radius: 20px;
-            margin: 30px 0;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 25px 0;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3), 0 0 30px rgba(138, 43, 226, 0.2);
+            border: 1px solid rgba(138, 43, 226, 0.3);
         }
         
         .countdown-timer {
-            background: rgba(255,255,255,0.1);
-            padding: 15px;
+            background: linear-gradient(45deg, rgba(138, 43, 226, 0.2), rgba(30, 144, 255, 0.2));
+            padding: 12px;
             border-radius: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             text-align: center;
-            border: 2px solid rgba(255,255,255,0.2);
+            border: 2px solid rgba(138, 43, 226, 0.4);
+            font-size: 0.95em;
         }
         
         .social-proof {
-            background: rgba(255,255,255,0.1);
-            padding: 15px;
+            background: linear-gradient(45deg, rgba(30, 144, 255, 0.2), rgba(138, 43, 226, 0.2));
+            padding: 12px;
             border-radius: 10px;
-            margin-bottom: 20px;
-            border-left: 4px solid #feca57;
+            margin-bottom: 15px;
+            border-left: 4px solid #1e90ff;
+            font-size: 0.9em;
         }
         
         .scarcity-alert {
-            background: linear-gradient(45deg, #ff4757, #ff3838);
-            padding: 15px;
+            background: linear-gradient(45deg, #ff4757, #8a2be2);
+            padding: 12px;
             border-radius: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             text-align: center;
-            border: 2px solid rgba(255,255,255,0.3);
+            border: 2px solid rgba(255, 71, 87, 0.5);
             animation: pulse 2s infinite;
+            font-size: 0.95em;
         }
         
         @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(255, 71, 87, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(255, 71, 87, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(255, 71, 87, 0); }
+            0% { box-shadow: 0 0 0 0 rgba(138, 43, 226, 0.7); }
+            70% { box-shadow: 0 0 0 8px rgba(138, 43, 226, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(138, 43, 226, 0); }
         }
         
         .bonus-section {
-            background: linear-gradient(45deg, #2ed573, #1e90ff);
-            padding: 15px;
+            background: linear-gradient(45deg, #1e90ff, #8a2be2);
+            padding: 12px;
             border-radius: 10px;
             text-align: center;
-            border: 2px solid rgba(255,255,255,0.3);
+            border: 2px solid rgba(30, 144, 255, 0.5);
+            font-size: 0.95em;
         }
         
         .debug-info {
@@ -241,16 +259,134 @@
             border: 1px solid #dee2e6;
             border-radius: 5px;
             padding: 10px;
-            margin: 20px 0;
-            font-size: 12px;
+            margin: 15px 0;
+            font-size: 11px;
             color: #6c757d;
             text-align: left;
         }
         
-        @media (max-width: 768px) {
+        /* Media Queries para diferentes tamanhos de tela */
+        @media (max-width: 480px) {
+            body {
+                padding: 5px;
+            }
+            
             .container {
-                padding: 20px;
-                margin: 10px;
+                padding: 15px;
+                margin: 5px;
+                border-radius: 15px;
+            }
+            
+            h1 {
+                font-size: 1.6em;
+                margin-bottom: 15px;
+            }
+            
+            .description {
+                font-size: 0.95em;
+                line-height: 1.4;
+                margin: 12px 0;
+            }
+            
+            .price-highlight {
+                padding: 12px;
+                font-size: 1em;
+                margin: 12px 0;
+            }
+            
+            .urgency-section {
+                padding: 12px;
+                margin: 15px 0;
+            }
+            
+            .countdown-timer,
+            .scarcity-alert,
+            .bonus-section {
+                padding: 8px;
+                font-size: 0.85em;
+                margin-bottom: 10px;
+            }
+            
+            .social-proof {
+                padding: 8px;
+                font-size: 0.8em;
+                margin-bottom: 10px;
+            }
+            
+            .cta-button, 
+            .whatsapp-btn {
+                display: block;
+                width: 90%;
+                margin: 8px auto;
+                padding: 12px 15px;
+                font-size: 0.9em;
+                min-width: auto;
+            }
+            
+            .social-share {
+                margin-top: 15px;
+                padding-top: 15px;
+            }
+            
+            .share-text {
+                font-size: 0.9em;
+                margin-bottom: 10px;
+            }
+            
+            .preview-image {
+                margin: 15px auto;
+            }
+            
+            .preview-image:hover {
+                transform: none;
+            }
+        }
+        
+        @media (max-width: 360px) {
+            .container {
+                padding: 12px;
+            }
+            
+            h1 {
+                font-size: 1.4em;
+            }
+            
+            .description {
+                font-size: 0.9em;
+            }
+            
+            .price-highlight {
+                font-size: 0.95em;
+                padding: 10px;
+            }
+            
+            .urgency-section {
+                padding: 10px;
+            }
+            
+            .countdown-timer,
+            .scarcity-alert,
+            .bonus-section {
+                font-size: 0.8em;
+                padding: 6px;
+            }
+            
+            .social-proof {
+                font-size: 0.75em;
+                padding: 6px;
+            }
+            
+            .cta-button, 
+            .whatsapp-btn {
+                font-size: 0.85em;
+                padding: 10px 12px;
+                width: 95%;
+            }
+        }
+        
+        @media (min-width: 481px) and (max-width: 768px) {
+            .container {
+                padding: 25px;
             }
             
             h1 {
@@ -258,12 +394,15 @@
             }
             
             .description {
-                font-size: 1em;
+                font-size: 1.05em;
             }
             
-            .cta-button, .whatsapp-btn {
+            .cta-button, 
+            .whatsapp-btn {
                 display: block;
-                margin: 10px 0;
+                width: 80%;
+                margin: 10px auto;
+                min-width: auto;
             }
         }
     </style>
@@ -274,13 +413,12 @@
         
         <div class="preview-image">
             <img id="originalImage" 
-                 src="https://engevealbani.github.io/yesfotos/foto/prevew21.jpg" 
+                 src="https://viniciusxtrad.github.io/imagens/sualanchonete01.png" 
                  alt="Landing Page Embutida - Banner WhatsApp" 
                  class="resized-image"
                  crossorigin="anonymous">
         </div>
 
-        <!-- Canvas oculto para redimensionar -->
         <canvas id="imageCanvas"></canvas>
 
         <div class="price-highlight">
@@ -305,11 +443,10 @@
             <strong>📲 Adote agora ou fique invisível no WhatsApp.</strong>
         </p>
 
-        <!-- Gatilhos de Escassez e Urgência -->
         <div class="urgency-section">
             <div class="countdown-timer">
                 ⏰ <strong>OFERTA LIMITADA!</strong><br>
-                <span style="color: red;">Restam apenas 7 vagas hoje!</span>
+                <span style="color: #ffeb3b;">Restam apenas 7 vagas hoje!</span>
             </div>
             
             <div class="social-proof">
@@ -342,56 +479,47 @@
                 📱 Chamar Agora - WhatsApp
             </a>
         </div>
+    </div>
 
     <script>
-        // Função para redimensionar imagem para 1200x630px
         function resizeImageTo1200x630(img) {
             const canvas = document.getElementById('imageCanvas');
             const ctx = canvas.getContext('2d');
             
-            // Define as dimensões do canvas
             canvas.width = 1200;
             canvas.height = 630;
             
-            // Calcula a proporção para manter a imagem sem distorção
             const imgRatio = img.naturalWidth / img.naturalHeight;
             const canvasRatio = 1200 / 630;
             
             let drawWidth, drawHeight, offsetX, offsetY;
             
             if (imgRatio > canvasRatio) {
-                // Imagem mais larga - ajusta pela altura
                 drawHeight = 630;
                 drawWidth = drawHeight * imgRatio;
                 offsetX = (1200 - drawWidth) / 2;
                 offsetY = 0;
             } else {
-                // Imagem mais alta - ajusta pela largura
                 drawWidth = 1200;
                 drawHeight = drawWidth / imgRatio;
                 offsetX = 0;
                 offsetY = (630 - drawHeight) / 2;
             }
             
-            // Limpa o canvas e desenha a imagem redimensionada
-            ctx.fillStyle = '#ffffff'; // Fundo branco
+            ctx.fillStyle = '#ffffff';
             ctx.fillRect(0, 0, 1200, 630);
             ctx.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
             
-            // Converte para base64 e atualiza as meta tags
             const resizedImageDataUrl = canvas.toDataURL('image/png', 0.9);
             updateMetaTags(resizedImageDataUrl);
             
             return resizedImageDataUrl;
         }
         
-        // Função para atualizar meta tags com a imagem redimensionada
         function updateMetaTags(imageDataUrl) {
-            // Remove meta tags antigas
             const oldMetaTags = document.querySelectorAll('meta[property="og:image"], meta[property="og:image:secure_url"], meta[name="twitter:image"]');
             oldMetaTags.forEach(tag => tag.remove());
             
-            // Cria novas meta tags com a imagem redimensionada
             const metaTags = [
                 { property: 'og:image', content: imageDataUrl },
                 { property: 'og:image:secure_url', content: imageDataUrl },
@@ -407,52 +535,12 @@
             });
         }
         
-        // Função para testar se a imagem está sendo carregada corretamente
-        function testWhatsAppPreview() {
-            const debugDiv = document.getElementById('debugInfo');
-            
-            // Verifica se a imagem original carregou
-            const img = document.getElementById('originalImage');
-            
-            let debugText = `
-                <strong>Status da Imagem:</strong><br>
-                • URL: ${img.src}<br>
-                • Carregada: ${img.complete ? '✅ Sim' : '❌ Não'}<br>
-                • Dimensões naturais: ${img.naturalWidth}x${img.naturalHeight}<br>
-                • Cross-origin: ${img.crossOrigin || 'não definido'}<br><br>
-                
-                <strong>Meta Tags Atuais:</strong><br>
-            `;
-            
-            // Lista todas as meta tags relevantes
-            const metaTags = document.querySelectorAll('meta[property^="og:"], meta[name^="twitter:"]');
-            metaTags.forEach(tag => {
-                const prop = tag.getAttribute('property') || tag.getAttribute('name');
-                const content = tag.getAttribute('content');
-                debugText += `• ${prop}: ${content ? content.substring(0, 50) + '...' : 'vazio'}<br>`;
-            });
-            
-            debugDiv.innerHTML = debugText;
-            
-            // Tenta redimensionar a imagem se ela estiver carregada
-            if (img.complete && img.naturalWidth > 0) {
-                try {
-                    const resizedImage = resizeImageTo1200x630(img);
-                    debugDiv.innerHTML += '<br><strong>✅ Imagem redimensionada com sucesso!</strong>';
-                } catch (error) {
-                    debugDiv.innerHTML += `<br><strong>❌ Erro ao redimensionar:</strong> ${error.message}`;
-                }
-            }
-        }
-        
-        // Carrega e processa a imagem quando ela estiver pronta
         window.addEventListener('load', function() {
             const img = document.getElementById('originalImage');
             
             img.onload = function() {
                 console.log('Imagem carregada:', img.naturalWidth + 'x' + img.naturalHeight);
                 
-                // Redimensiona automaticamente se necessário
                 if (img.naturalWidth !== 1200 || img.naturalHeight !== 630) {
                     try {
                         resizeImageTo1200x630(img);
@@ -465,29 +553,24 @@
             
             img.onerror = function() {
                 console.error('Erro ao carregar a imagem');
-                document.getElementById('debugInfo').innerHTML = '<strong>❌ Erro ao carregar a imagem original</strong>';
             };
             
-            // Se a imagem já estiver carregada
             if (img.complete) {
                 img.onload();
             }
         });
         
-        // Força o refresh dos meta tags para redes sociais
         if (window.location.hash === '#refresh') {
             window.location.hash = '';
             window.location.reload();
         }
         
-        // Debug para verificar meta tags
         console.log('Meta tags carregadas:');
         const metaTags = document.querySelectorAll('meta[property^="og:"]');
         metaTags.forEach(tag => {
             console.log(tag.getAttribute('property') + ': ' + tag.getAttribute('content'));
         });
         
-        // Contador de urgência
         function updateCountdown() {
             const hoursElement = document.getElementById('hours');
             if (hoursElement) {
@@ -499,10 +582,8 @@
             }
         }
         
-        // Atualiza a cada hora (3600000 ms)
         setInterval(updateCountdown, 3600000);
         
-        // Efeito de entrada suave
         document.querySelector('.container').style.opacity = '1';
     </script>
 </body>
